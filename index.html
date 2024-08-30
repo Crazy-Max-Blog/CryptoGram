@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="CrazyCrypto.min.js"></script>
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+      <style>
+        .pabc {
+          /* block */
+          width: 75%;
+          height: 100%;
+          
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        .overflow {
+          background-color:transparent;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          /*width: 50%;
+          height: 100vh;*/
+          
+          /*scrollbar-width: thin;
+          scrollbar-color: green transparent;
+          scrollbar-border:100px solid green;*/
+          /*overflow: scroll;*/
+          border:10px solid transparent;
+          
+          scroll-behavior: smooth;
+        }
+        
+
+/* width */
+.overflow::-webkit-scrollbar {
+  width: 1vh;
+}
+
+/* Track */
+.overflow::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.overflow::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.overflow::-webkit-scrollbar-thumb:hover {
+  background: rgb(170,170,170); 
+}
+        
+    .input-textarea {
+      border: 1px solid #ffffff;
+      border-radius: 6px;
+      padding: 10px 15px;
+      background-color: transparent;
+      color: #ffffff;
+      font-family: "Roboto Mono", monospace;
+      font-size: 17px;
+      font-weight: 300;
+      resize: none;
+      overflow-x: hidden;
+    }
+
+    .input-textarea:focus {
+      border-color: #FF8630;
+      outline: none;
+    }
+      </style><!--border: 1px solid black;-->
+      
+      <div class="pabc">
+        <div class="overflow" style="height:80%;width:100%;" id="con">
+        </div>
+        <div style="height:10%;width:100%;position:relative;">
+          <div style="padding-bottom: 25px;height:5%;color:white">
+            <a id="hrefToChat">Link to chat</a>
+          </div>
+          <div style="height:100%;align-items: center;display:flex;">
+            <textarea id="msgText" class="input-textarea" placeholder="Put message..." style="height:100%;width:80%"></textarea>
+            <button id="sendBtn" style="position:relative;top:0;left:0;background:blue;border-radius:100%;border:none;cursor: pointer;width:20%;height:100%;font-size: 40px;" onclick="attBtnSend()">🏹</button>
+            </div>
+        </div>
+      </div>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
