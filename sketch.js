@@ -150,13 +150,15 @@ function purl(val) {
 }
 
 function setup() {
-  createCanvas(0, 0);
-  //console.log("setup");
-  //purl("https://abc.def/a/s/dfg?mm=1&key=qwerty1234");
-  //init("qwerty12345");
-  //console.log("setup end");
-  //for(var i=0;i<15;i++)pushToCon("a", "bcd");
-  purl(document.location.toString());
+  document.onLoad = function() {
+    createCanvas(0, 0);
+    //console.log("setup");
+    //purl("https://abc.def/a/s/dfg?mm=1&key=qwerty1234");
+    //init("qwerty12345");
+    //console.log("setup end");
+    //for(var i=0;i<15;i++)pushToCon("a", "bcd");
+    purl(document.location.toString());
+  }
 }
 
 function draw() {
