@@ -150,15 +150,16 @@ function purl(val) {
 }
 
 function setup() {
-  //console.log("setup");
+  console.log("setup");
   createCanvas(0, 0);
   document.onload = function() {
+    console.log("Load");
     //purl("https://abc.def/a/s/dfg?mm=1&key=qwerty1234");
     //init("qwerty12345");
     //for(var i=0;i<15;i++)pushToCon("a", "bcd");
     purl(document.location.toString());
   }
-  //console.log("setup end");
+  console.log("setup end");
 }
 
 function draw() {
