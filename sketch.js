@@ -143,9 +143,9 @@ function purl(val) {
   }
   //return json;
   mm=json.mm;
-  init(json.key);
+  if(_key==undefined) init(makeid(8));
+  else init(json.key);
   start(sets);
-  if(_key==undefined) {_key=makeid(8);init(_key);}
   if(mm==undefined) mm=prompt("Please put max num of humans, or put -1 to accept all.");
 }
 
