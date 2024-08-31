@@ -143,7 +143,7 @@ function purl(val) {
   }
   //return json;
   mm=json.mm;
-  if(_key==undefined) init(makeid(8));
+  if(json.key==undefined) init(makeid(8));
   else init(json.key);
   start(sets);
   if(mm==undefined) mm=prompt("Please put max num of humans, or put -1 to accept all.");
